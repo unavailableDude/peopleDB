@@ -19,6 +19,10 @@ public:
 	void DeletePerson(Person targetPerson);
 	void ListDB();
 	void FlushDB();
+
+private:
+	void OpenDB();
+	void CloseDB();
 };
 
 #endif

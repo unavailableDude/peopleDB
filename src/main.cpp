@@ -7,7 +7,7 @@
 //C++
 #include <iostream>
 #include <stdint.h>
-#include <vector>
+// #include <vector>
 
 //3rd party
 #include "../include/SDL2/SDL.h"
@@ -18,14 +18,16 @@
 
 
 int main(int argc, char* argv[]){
-	std::cout << "Hello!\n";
 	Person p1("John", 25);
 	Person p2("Hannah", 22);
 	Person p3("Martin", 30);
 
-	p1.ListInfo();
-	p2.ListInfo();
-	p3.ListInfo();
+	p1.DebugInfo();
+	p2.DebugInfo();
+	p3.DebugInfo();
+
+	PeopleCRUD peopleCRUD("db/people.txt");
+	peopleCRUD.CreatePerson(p1);
 
 	return 0;
 }

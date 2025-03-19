@@ -24,7 +24,11 @@ void Person::SetAge(int8_t age){
 	this->age = age;
 }
 
-void Person::ListInfo(){
+void Person::DebugInfo(){
 	std::cout << "First name: " << this->firstName << "\n";
 	std::cout << "Age: " << (int)this->age << "\n";
+}
+
+std::string Person::GetFormattedInfo(){
+	return "First name: " + this->firstName + "\n" + "Age: " + std::to_string((int)this->age) + "\n";
 }

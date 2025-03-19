@@ -22,7 +22,8 @@ public:
 	int8_t GetAge();
 	void SetFirstName(std::string firstName);
 	void SetAge(int8_t age);
-	void ListInfo();
+	void DebugInfo();
+	std::string GetFormattedInfo();
 };
 
 #endif
